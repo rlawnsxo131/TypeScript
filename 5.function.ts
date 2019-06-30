@@ -30,7 +30,7 @@ function fetchVideo(url: string, subtitleLanguage?: string) {
   const option = { url };
 
   if (subtitleLanguage) {
-    option.subtitleLanguage = true;
+    option.subtitleLanguage = true; //Property 'subtitleLanguage' does not exist on type '{ url: string; }'
   }
   /* ... */
 }
