@@ -39,5 +39,28 @@ c(10);
 c.reset();
 c.interval = 5.0;
 
+
 // 제네릭 인터페이스
+interface MyResponse<Data> {
+  data: Data;
+  status: number;
+  ok: boolean;
+  /* ... */
+}
+interface User2 {
+  name: string;
+  readonly height: number;
+  /* ... */
+};
+
+const user: MyResponse<User2> = await getUserApiCall(userId);
+user.data.name; // 타입 시스템은 user.name이 string임을 알 수 있다.
+
+
+//함수 인터페이스
+interface GetData {
+  <Data>(response: MyResponse<Data>): Data;
+}
+
+
 
