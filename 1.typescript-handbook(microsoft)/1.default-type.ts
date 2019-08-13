@@ -28,14 +28,14 @@ let x: [string, number];
 // 초기화
 x = ["hello", 10]; // 좋아요
 // 부정확한 초기화
-x = [10, "hello"]; // 오류
+//x = [10, "hello"]; // 오류
 
 console.log(x[0].substr(1)); // 좋아요
-console.log(x[1].substr(1)); // 오류, 'number'은 'substr'을 가지고 있지 않다.
+//console.log(x[1].substr(1)); // 오류, 'number'은 'substr'을 가지고 있지 않다.
 
-x[3] = "world"; // 좋아요, 'string'은 'string | number'에 할당될 수 있다.
-console.log(x[5].toString()); // 좋아요, 'string' 및 'number'에 모두 'toString'이 있다.
-x[6] = true; // 오류, 'boolean'은 'string | number' 타입이 아나다.
+//x[3] = "world"; // 좋아요, 'string'은 'string | number'에 할당될 수 있다.
+//console.log(x[5].toString()); // 좋아요, 'string' 및 'number'에 모두 'toString'이 있다.
+//x[6] = true; // 오류, 'boolean'은 'string | number' 타입이 아나다.
 
 /* Enum */
 enum Color1 {Red, Green, Blue}
@@ -57,7 +57,7 @@ notSure.ifItExists(); // 좋아요, 런타임에 ifItExists가 존재할 수 있
 notSure.toFixed(); // 좋아요, toFixed는 존재한다. (그러나 컴파일러는 체크하지 않는다)
 
 let prettySure: Object = 4;
-prettySure.toFixed(); // 오류: 'Object' 타입에 'toFixed' 프로퍼티는 존재하지 않는다.
+//prettySure.toFixed(); // 오류: 'Object' 타입에 'toFixed' 프로퍼티는 존재하지 않는다.
 
 let list: any[] = [1, true, "free"];
 list[1] = 100;
@@ -93,6 +93,3 @@ function infiniteLoop(): never {
 /* 타입 단언(Type assertions) */
 let someValue: any = "this is a string";
 let strLength: number = (<string>someValue).length; // 괄호 빼면 에러
-
-
-
