@@ -17,6 +17,6 @@
           ]
       }
   },
-  "include": [ "src/**/*" ],
-  "exclude": [ "node_modules" ]
+  "include": [ "src/**/*" ], // 얘를 기본으로 읽음
+  "exclude": [ "node_modules" ] // 얘는 제외하고 읽음
 }
