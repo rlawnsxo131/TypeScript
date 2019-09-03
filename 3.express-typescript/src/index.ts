@@ -1,10 +1,10 @@
-import express from 'express';
+import * as Express from 'express';
 import api from './api';
 
 class App {
-    public application: express.Application;
+    application: Express.Application;
     constructor() {
-        this.application = express();
+        this.application = Express();
     }
 }
 
@@ -12,13 +12,10 @@ const app = new App().application;
 
 app.set('port', process.env.PORT || 4000);
 
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(Express.json());
+app.use(Express.urlencoded({extended: false}));
 app.use('/api', api);
 
 app.listen(app.get('port'), () => {
     console.log(`connect to ${app.get('port')} port!`);
 });
-
-
-

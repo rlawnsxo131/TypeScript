@@ -2,7 +2,7 @@
   "compilerOptions": {
       "module": "commonjs",
       "incremental": true,
-      "esModuleInterop": true,
+    //   "esModuleInterop": true, 이걸 끄면 import * as Express from 'express'; 식으로 작성
       "allowSyntheticDefaultImports": true,
       "target": "es5",
       "noImplicitAny": true,

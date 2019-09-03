@@ -1,7 +1,7 @@
-import express from 'express';
+import { Router } from 'express';
 import hello from './hello';
 
-const api = express.Router();
+const api = Router();
 
 api.use('/hello', hello);
 

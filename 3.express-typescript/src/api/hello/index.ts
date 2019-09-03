@@ -1,5 +1,6 @@
-import express from 'express';
-const hello = express.Router();
+import { Router } from 'express';
+
+const hello = Router();
 
 hello.get('/', (req, res, next) => {
     res.send('hello');
