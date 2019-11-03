@@ -8,11 +8,11 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/Algorithm/tsp(3).js",
+            "program": "${workspaceFolder}/test.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ],
-            "cwd": "${workspaceFolder}/Algorithm"
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
